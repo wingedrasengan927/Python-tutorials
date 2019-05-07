@@ -22,6 +22,9 @@ with open('dummy.txt') as f:
     # It picks up where it left off
     # hence the empty list
 
+    # one line is considered the distance between the first character to the 'enter' character
+    # So, sometimes readline may even read the entire paragraph because that's the definition of what a line is
+
     # grab the firstline
     print(f.readline()) # returns nothing. reason above.
 
