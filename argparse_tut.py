@@ -11,7 +11,6 @@ def main():
     parser.add_argument('--operation', type=str, default='add', help='What operation')
     args = parser.parse_args()
     sys.stdout.write(str(calc(args)))
-    print(args)
 
 def calc(args):
     if args.operation == 'add':
@@ -22,10 +21,6 @@ def calc(args):
         return args.x*args.y
     elif args.operation == 'div':
         return args.x/args.y
-
-def p(*args):
-    for arg in args:
-        print(arg)
 
 if __name__ == '__main__':
     main()
