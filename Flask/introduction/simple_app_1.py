@@ -19,9 +19,12 @@ part 2
 
 part 3
 -------
-1. query strings is not the nicest way to pass arguments.
-2. there is another way to it
-3. int objects are not callable in flask
+1. The query string begins after the question mark (?) and has two key-value pairs separated by an ampersand (&). 
+For each pair, the key is followed by an equals sign (=) and then the value. 
+example: example.com?arg1=value1&arg2=value2
+2. query strings is not the nicest way to pass arguments.
+3. there is another way to it
+4. int objects are not callable in flask
 '''
 
 from flask import Flask
@@ -35,7 +38,7 @@ app = Flask(__name__)
 # to make a normal function a view, we have to give it a route
 # to give route, we decorate it with the function @app.route and specify what the route is
 # a decorator is a function that wraps around another function and lets you do things to that function
-@app.route('/')
+@app.route('/') # example query string: http://127.0.0.1:5000/?name=neeraj
 def index(name="World"):
     # args object holds all the arguments in the request
     # it's like a dictionary, so we can use the get method
